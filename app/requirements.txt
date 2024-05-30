@@ -1,0 +1,9 @@
+unicorn
+ultralytics
+fastapi
+opencv-python==4.6.0.66
+pycocotools
+
+scikit-learn 
+tqdm
+Pillow

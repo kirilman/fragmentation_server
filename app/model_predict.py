@@ -3,6 +3,7 @@ import cv2
 from asbestutills.plotter.plotting import plot_bboxs, plot_obounding_box
 from datetime import datetime
 
+#curl --location 'http://127.0.0.1:8787/box' -X POST -F 'file=@"received_image.jpeg"
 
 class BoxModel:
     def __init__(self, path2weight):
@@ -30,11 +31,3 @@ def draw_boxes(image, anno):
             )
     now = datetime.now()
     cv2.imwrite(f"./result/result_{now}.jpeg", image_with_bbox)
-    # predcited_labels = results[0].names[int(results[0].boxes.cls)]
-
-
-# image = cv2.imread(
-#     "/media/kirilman/Z/dataset/rocks/SAM-Rock-Fragmentation-main/images/103.JPG"
-# )
-# anno = predict_box(image)
-# draw_anno(image,anno[0])
